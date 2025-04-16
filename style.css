@@ -19,7 +19,7 @@ body{
 
 #navbar:before {
     content: '';
-    background: linear-gradient(25deg,  #00ffd5, #002bff, #7a00ff, #f84ad2);
+    background: linear-gradient(45deg,  #00ffd5, #002bff, #7a00ff, #f84ad2);
     position: absolute;
     top: -2px;
     left:-2px;
@@ -153,9 +153,9 @@ body{
 
 .cachorro{
     position: fixed;
-    top: 68%; 
-    right: 85%;
-    width: 185  px;
+    top: 750px; 
+    right: 1710px;
+    width: 185px;
     height: 200px;
 }
 
@@ -166,9 +166,9 @@ body{
     }
 
     .dono, .pet {
-        width: 90%;
+        width: 88%;
         padding: 20px;
-        margin: 10px 0;
+        margin: 10px;
     }
 
     .cachorroDono {
