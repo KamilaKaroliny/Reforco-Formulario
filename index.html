@@ -117,22 +117,22 @@
             <h1>Formulario do Pet</h1>
             <form action="" id="pet">
 
-                <label for="nome"> Qual o primeiro nome do seu cachorro:</label><br>
+                <label for="nome"> Qual o primeiro nome do seu animal:</label><br>
                 <input type="text" nome="primeiroNome" id="primeiroNome_pet" required>
 
                 <br>
 
-                <label for="sobrenome">Qual é o sobrenome do seu cachorro:</label><br>
+                <label for="sobrenome">Qual é o sobrenome do seu animal:</label><br>
                 <input type="text" nome="sobrenome" id="sobrenome_pet" required>
 
                 <br>
 
-                <label for="raca">Qual é a raça do seu cachorro:</label><br>
+                <label for="raca">Qual é a raça do seu animal:</label><br>
                 <input type="text" nome="raca" id="raca_pet" required>
 
                 <br>
 
-                <p>Seu cachorro é vacinado</p>
+                <p>Seu animal é vacinado</p>
                 <input type="radio" id="sim" name="vacina_pet" value="sim">
                 <label for="sim">Sim</label><br>
 
@@ -144,29 +144,75 @@
 
                 <br>
 
-                <label for="Data">Qual é a data do nascimento do seu cachorro:</label><br>
+                <label for="Data">Qual é a data do nascimento do seu animal:</label><br>
                 <input type="date" nome="Data" id="Data_pet" required>
 
                 <br>
 
-                <label for="horana">Hora de nascimento:</label><br>
+                <label for="horana">Qual é a hora do nascimento do seu animal:</label><br>
                 <input type="time" nome="horana" id="horana_pet" required>
 
                 <br>
 
-                <label for="racaP">Raça do pai:</label><br>
+                <label for="racaP">Qual é a raça do pai do seu animal:</label><br>
                 <input type="text" nome="racaP" id="racaP_pet" required>
 
                 <br>
 
-                <label for="racaM">Raça da mãe:</label><br>
+                <label for="racaM">Qual é a raça da mãe do seu animal:</label><br>
                 <input type="text" nome="racaM" id="racaM_pet" required>
 
                 <br>
 
-                <label for="idade">Idade:</label><br>
+                <label for="idade">Qual é a idade do seu animal:</label><br>
                 <input type="number" nome="idade" id="idade_pet" required>
+
+                <p>Qual é o sexo do seu animal?</p>
+                <input type="radio" id="macho" name="sexo_pet" value="macho">
+                <label for="macho">Macho</label><br>
+
+                <input type="radio" id="femea" name="sexo_pet" value="fêmea">
+                <label for="femea">Fêmea</label><br>
+
+                <input type="radio" id="planta" name="sexo_pet" value="planta">
+                <label for="planta">Se considera uma planta</label><br>
                 
+                <label for="olhocor">Selecione a cor dos olhos do seu animal:</label>
+                <input type="color" id="olhocor" name="olhocor" value="#008181"><br>
+
+                <br>
+
+                <label for="sono">Com qual frequência o seu animal dorme:</label><br>
+                <div class="range-container">
+                    <span>Pouco</span>
+                    <input type="range" name="sono" id="sono_pet" required>
+                    <span>Muito</span>
+                </div>
+
+                <p>Seu animal é bravo:</p>
+                <input type="radio" id="sim" name="bravo_pet" value="sim">
+                <label for="sim">Sim</label><br>
+
+                <input type="radio" id="nao" name="bravo_pet" value="não">
+                <label for="nao">Não</label><br>
+
+                <input type="radio" id="importa" name="bravo_pet" value="importa">
+                <label for="importa">Importa a pessoa</label><br>
+
+                <br>
+
+                <label for="carrinho">Seu animal gosta de carrinho:</label><br>
+                <div class="range-container">
+                    <span>Pouco</span>
+                    <input type="range" name="carrinho" id="carrinho_pet" required>
+                    <span>Muito</span>
+                </div>
+
+                <br>
+                
+                <label for="alimentacao">O que o seu animal come:</label><br>
+                <input type="text" nome="alimentacao" id="alimentacao_pet" required>
+
                 <br>
                 <br> 
 
