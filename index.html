@@ -40,7 +40,7 @@
                 <br>
 
                 <label for="phone">Telefone:</label><br>
-                <input type="tel" id="phone" name="phone" placeholder="(??) ?????-????" pattern="[0-9]{2}-[0-9]{3}-[0-9]{3}"><br>
+                <input type="tel" id="phone" name="phone" placeholder="(??) ?????-????" pattern="[0-9]{2}-[0-9]{5}-[0-9]{4}"><br>
                 <small>Fomato: (12) 12345-6789 </small>
 
                 <br>
@@ -60,15 +60,13 @@
                 
                 <br>
 
-                <p>Qual é o seu genêro</p>
-                <input type="radio" id="feminino" name="genero_dono" value="feminino">
-                <label for="feminino">Feminino</label><br>
-
-                <input type="radio" id="masculino" name="genero_dono" value="masculino">
-                <label for="masculino">Masculino</label><br>
-
-                <input type="radio" id="prefironãoinformar" name="genero_dono" value="prefironãoinformar">
-                <label for="prefironãoinformar">Prefiro não informar</label><br>
+                <label class="opcao" for="genero">Qual é o seu genêro:</label>
+                <input list="genero_donoo" name="genero" id="genero_dono">
+                <datalist id="genero_donoo">
+                    <option value="Masculino"></option>
+                    <option value="Feminino"></option>
+                    <option value="Prefiro não informar"></option>
+                </datalist>
 
                 <br>
 
@@ -103,12 +101,17 @@
                 <br>
 
                 <label for="animal">Que animal você tem:</label><br>
-                <input type="text" id="animal" id="tipo_dono" required>
+                <input type="text" id="animal" id="tipoPet_dono" required>
+
+                <br>
+
+                <label for="myfile">Coloque aqui uma imagem do seu animalzinho🤗:</label><br>
+                <input type="file" id="myfile" name="myfile">
 
                 <br>
                 <br> 
 
-                <button type="button" onclick="valida()">Enviar</button>
+                <button type="button" onclick="validadono()">Enviar</button>
 
             </form>
         </div>
@@ -167,16 +170,16 @@
                 <label for="idade">Qual é a idade do seu animal:</label><br>
                 <input type="number" nome="idade" id="idade_pet" required>
 
-                <p>Qual é o sexo do seu animal?</p>
-                <input type="radio" id="macho" name="sexo_pet" value="macho">
-                <label for="macho">Macho</label><br>
+                <label class="opcao" for="sexo">Qual é o sexo do seu animal:</label>
+                <input list="sexo_pett" name="sexo" id="sexo_pet">
+                <datalist id="sexo_pett">
+                    <option value="macho"></option>
+                    <option value="fêmea"></option>
+                    <option value="se considera uma planta"></option>
+                </datalist>
 
-                <input type="radio" id="femea" name="sexo_pet" value="fêmea">
-                <label for="femea">Fêmea</label><br>
+                <br>
 
-                <input type="radio" id="planta" name="sexo_pet" value="planta">
-                <label for="planta">Se considera uma planta</label><br>
-                
                 <label for="olhocor">Selecione a cor dos olhos do seu animal:</label>
                 <input type="color" id="olhocor" name="olhocor" value="#008181"><br>
 
@@ -216,7 +219,7 @@
                 <br>
                 <br> 
 
-                <button type="button" onclick="valida()">Enviar</button>
+                <button type="button" onclick="validapet()">Enviar</button>
             </form>
         </div>
         

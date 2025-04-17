@@ -1,6 +1,11 @@
 body{
     background-image: linear-gradient(to top left,#004e4e, #007777, #027e7e, #009292);
     color:#ffffff;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.opcao {
+    display: block;
 }
 
 #navbar{
