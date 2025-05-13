@@ -10,37 +10,37 @@
 
 </head>
 
-<header>
-    <div id="navbar">
-        <img class="icone" src="Imagens/Logo.png" alt="logo do petshop">
-        <h1>Petshop da Kaka</h1>
-    </div>
-
-</header>
-
 <body>
+    <header>
+        <div id="navbar">
+            <img class="icone" src="Imagens/Logo.png" alt="logo do petshop">
+            <h1>Petshop da Kaka</h1>
+        </div>
+
+    </header>
+
     <div id="flex">
         <div class="dono">
             <h1>Formulario do Dono</h1>
             <form action="" id="Dono_pet">
 
                 <label for="nome">Primeiro nome:</label><br>
-                <input type="text" nome="primeiroNome" id="primeiroNome_dono" required>
+                <input type="text" name="primeiroNome" id="primeiroNome_dono" required>
 
                 <br>
 
                 <label for="sobrenome">Sobrenome:</label><br>
-                <input type="text" nome="sobrenome" id="sobrenome_dono" required>
+                <input type="text" name="sobrenome" id="sobrenome_dono" required>
 
                 <br>
 
                 <label for="cpf">CPF:</label><br>
-                <input type="text" nome="cpf" id="cpf_dono" required>
+                <input type="text" name="cpf" id="cpf_dono" required>
 
                 <br>
 
                 <label for="phone">Telefone:</label><br>
-                <input type="tel" id="phone" name="phone" placeholder="(??) ?????-????" pattern="[0-9]{2}-[0-9]{5}-[0-9]{4}"><br>
+                <input type="tel" id="phone" name="phone" placeholder="(12) 12345-6789" pattern="[0-9]{2}-[0-9]{5}-[0-9]{4}"><br>
                 <small>Fomato: (12) 12345-6789 </small>
 
                 <br>
@@ -70,28 +70,28 @@
 
                 <br>
 
-                <label for="Data">Data do nascimento:</label><br>
-                <input type="date" nome="Data" id="Data_dono" required>
+                <label for="DataNa">Data do nascimento:</label><br>
+                <input type="date" name="DataNa" id="Data_dono" required>
 
                 <br>
 
-                <label for="horana">Hora de nascimento:</label><br>
-                <input type="time" nome="horana" id="horana_dono" required>
+                <label for="horaNa">Hora de nascimento:</label><br>
+                <input type="time" name="horana" id="horaNa_dono" required>
 
                 <br>
 
                 <label for="nomeP">Nome de pai:</label><br>
-                <input type="text" nome="nomeP" id="nomeP_dono" required>
+                <input type="text" name="nomeP" id="nomeP_dono" required>
 
                 <br>
 
                 <label for="nomeM">Nome da mãe:</label><br>
-                <input type="text" nome="nomeM" id="nomeM" required>
+                <input type="text" name="nomeM" id="nomeM" required>
 
                 <br>
 
                 <label for="idade">Idade:</label><br>
-                <input type="number" nome="idade" id="idade_dono" required>
+                <input type="number" name="idade" id="idade_dono" required>
 
                 <br>
 
@@ -101,7 +101,7 @@
                 <br>
 
                 <label for="animal">Que animal você tem:</label><br>
-                <input type="text" id="animal" id="tipoPet_dono" required>
+                <input type="text" name="animal" id="tipoPet_dono" required>
 
                 <br>
 
@@ -121,17 +121,17 @@
             <form action="" id="Pet">
 
                 <label for="nome"> Qual o primeiro nome do seu animal:</label><br>
-                <input type="text" nome="primeiroNome" id="primeiroNome_pet" required>
+                <input type="text" name="primeiroNome" id="primeiroNome_pet" required>
 
                 <br>
 
                 <label for="sobrenome">Qual é o sobrenome do seu animal:</label><br>
-                <input type="text" nome="sobrenome" id="sobrenome_pet" required>
+                <input type="text" name="sobrenome" id="sobrenome_pet" required>
 
                 <br>
 
                 <label for="raca">Qual é a raça do seu animal:</label><br>
-                <input type="text" nome="raca" id="raca_pet" required>
+                <input type="text" name="raca" id="raca_pet" required>
 
                 <br>
 
@@ -148,27 +148,27 @@
                 <br>
 
                 <label for="Data">Qual é a data do nascimento do seu animal:</label><br>
-                <input type="date" nome="Data" id="Data_pet" required>
+                <input type="date" name="Data" id="Data_pet" required>
 
                 <br>
 
-                <label for="horana">Qual é a hora do nascimento do seu animal:</label><br>
-                <input type="time" nome="horana" id="horana_pet" required>
+                <label for="horaNa">Qual é a hora do nascimento do seu animal:</label><br>
+                <input type="time" name="horaNa" id="horana_pet" required>
 
                 <br>
 
                 <label for="racaP">Qual é a raça do pai do seu animal:</label><br>
-                <input type="text" nome="racaP" id="racaP_pet" required>
+                <input type="text" name="racaP" id="racaP_pet" required>
 
                 <br>
 
                 <label for="racaM">Qual é a raça da mãe do seu animal:</label><br>
-                <input type="text" nome="racaM" id="racaM_pet" required>
+                <input type="text" name="racaM" id="racaM_pet" required>
 
                 <br>
 
                 <label for="idade">Qual é a idade do seu animal:</label><br>
-                <input type="number" nome="idade" id="idade_pet" required>
+                <input type="number" name="idade" id="idade_pet" required>
 
                 <label class="opcao" for="sexo">Qual é o sexo do seu animal:</label>
                 <input list="sexo_pett" name="sexo" id="sexo_pet">
@@ -188,8 +188,13 @@
                 <label for="sono">Com qual frequência o seu animal dorme:</label><br>
                 <div class="range-container">
                     <span>Pouco</span>
-                    <input type="range" name="sono" id="sono_pet" required>
+                    
+                    <input type="range" name="sono" id="sono_pet" min="0"  max="10" value="5" 
+                    required oninput="document.getElementById('sono_valor').textContent = this.value">
+                    
                     <span>Muito</span>
+                    
+                    <span id="sono_valor">5</span>
                 </div>
 
                 <p>Seu animal é bravo:</p>
@@ -204,17 +209,22 @@
 
                 <br>
 
-                <label for="carrinho">Seu animal gosta de carrinho:</label><br>
+                <label for="carrinho_pet">Seu animal gosta de carrinho:</label><br>
                 <div class="range-container">
                     <span>Pouco</span>
-                    <input type="range" name="carrinho" id="carrinho_pet" required>
+                    
+                    <input type="range" name="carrinho" id="carrinho_pet" min="0" max="10" value="5" 
+                    required oninput="document.getElementById('carrinho_valor').textContent = this.value">
+                    
                     <span>Muito</span>
+                    
+                    <span id="carrinho_valor">5</span>
                 </div>
 
                 <br>
                 
                 <label for="alimentacao">O que o seu animal come:</label><br>
-                <input type="text" nome="alimentacao" id="alimentacao_pet" required>
+                <input type="text" name="alimentacao" id="alimentacao_pet" required>
 
                 <br>
                 <br> 

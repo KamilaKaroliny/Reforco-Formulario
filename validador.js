@@ -5,19 +5,19 @@ function validadono() {
     const nome = document.getElementById('primeiroNome_dono').value.trim();
     const sobrenome = document.getElementById('sobrenome_dono').value.trim();
     const cpf = document.getElementById('cpf_dono').value.trim();
-    //telefone
-    //email
-    //senha
-    //confirmação de senha
-    //radio genero
-    //data
-    //hora
+    const phone = document.getElementById('phone').value.trim();
+    const email = document.getElementById('email').value.trim();
+    const senha = document.getElementById('senha').value;
+    const confsenha = document.getElementById('confsenha').value;
+    const genero = document.getElementById('genero_dono').value.trim();
+    const data = document.getElementById('Data_dono').value;
+    const horaNa = document.getElementById('horaNa_dono').value;
     const nomeP = document.getElementById('nomeP_dono').value.trim();
-    const nomeM = document.getElementById('nomeM_dono').value.trim();
+    const nomeM = document.getElementById('nomeM').value.trim();
     const idade = parseInt(document.getElementById('idade_dono').value, 10);
-    //cor 
+    const favcor = document.getElementById('favcor').value;
     const animal = document.getElementById('tipoPet_dono').value.trim();
-    //foto do animal
+    const myfile = document.getElementById('myfile').files[0];
 
     //Processar os dados
 
@@ -41,13 +41,56 @@ function validadono() {
     } else {
         console.log(cpf);
     }
-    //telefone
-    //email
-    //senha
-    //confirmação de senhra
-    //radio genero
-    //data
-    //hora
+
+    if (!phone) {
+        alert('Por favor, preencha o telefone.');
+        return;
+    } else {
+        console.log(phone);
+    }
+    
+    if (!email) {
+        alert('Por favor, preencha o e-mail');
+        return;
+    } else {
+        console.log(email);
+    }
+    
+    if (!senha || senha.length < 6) {
+        alert('A senha deve ter no mínimo 6 caracteres');
+        return;
+    } else {
+        console.log(senha);
+    }
+
+    if (senha !== confsenha) {
+        alert('As senhas não estão iguais');
+        return;
+    } else {
+        console.log(confsenha);
+    }
+
+    if (!genero) {
+        alert('Por favor, informe o seu gênero');
+        return;
+    } else {
+        console.log(genero.value);
+    }
+    
+    if (!data) {
+        alert('Por favor, preencha a data de nascimento');
+        return;
+    } else {
+        console.log(data);
+    }
+
+    if (!horaNa) {
+        alert('Por favor, selecione o horário do seu nascimento');
+        return;
+    } else {
+        console.log(horaNa);
+    }
+    
     if (!nomeP) {
         alert('Por favor, preencha o nome do seu pai');
         return;
@@ -68,14 +111,27 @@ function validadono() {
     } else {
         console.log(idade);
     }
-    //cor
+
+    if (!favcor) {
+        alert('Por favor, selecione a sua cor favorita.');
+        return;
+    } else {
+        console.log(favcor);
+    }
+
     if (!animal) {
         alert('Por favor, preencha o seu tipo de animal');
         return;
     } else {
         console.log(animal);
     }
-    //foto do animal
+
+    if (!myfile) {
+        alert('Por favor, envie uma foto do seu pet.');
+        return;
+    } else {
+        console.log(myfile);
+    }
 
     //Devolver
 
@@ -90,23 +146,23 @@ function validapet() {
     const nome = document.getElementById('primeiroNome_pet').value.trim();
     const sobrenome = document.getElementById('sobrenome_pet').value.trim();
     const raca = document.getElementById('raca_pet').value.trim();
-    //radio vacina
-    //data
-    //hora
+    const vacina_pet = document.querySelector('input[name="vacina_pet"]:checked');
+    const data = document.getElementById('Data_pet').value;
+    const horaNa = document.getElementById('horana_pet').value;
     const racaP = document.getElementById('racaP_pet').value.trim();
     const racaM = document.getElementById('racaM_pet').value.trim();
     const idade = parseInt(document.getElementById('idade_pet').value, 10);
-    //radio F ou M
-    //cor 
-    //opção
-    //radio bravo
-    //range carrinho
+    const sexo = document.getElementById('sexo_pet').value.trim();
+    const olhocor = document.getElementById('olhocor').value;
+    const sono = document.getElementById('sono_pet').value;
+    const bravo_pet = document.querySelector('input[name="bravo_pet"]:checked');
+    const carrinho = document.getElementById('carrinho_pet').value;
     const alimentacao = document.getElementById('alimentacao_pet').value.trim();
 
     //Processar os dados
 
     if (!nome) {
-        alert('Por favor, preencha o nome');
+        alert('Por favor, preencha o nome do seu animal');
         return;
     } else {
         console.log(nome);
@@ -125,9 +181,27 @@ function validapet() {
     } else {
         console.log(raca);
     }
-    //radio vacina
-    //data
-    //hora
+
+    if (!vacina_pet ) {
+        alert('Por favor, informe se seu animal já é vacinado');
+        return;
+    } else {
+        console.log('vacinação pet:', vacina_pet .value);
+    }
+
+    if (!data) {
+        alert('Por favor, preencha a data de nascimento');
+        return;
+    } else {
+        console.log(data);
+    }
+
+    if (!horaNa) {
+        alert('Por favor, selecione o horário do seu nascimento');
+        return;
+    } else {
+        console.log(horaNa);
+    }
     if (!racaP) {
         alert('Por favor, preencha a raça do pai do seu animal');
         return;
@@ -148,11 +222,43 @@ function validapet() {
     } else {
         console.log(idade);
     }
-    //radio F ou M
-    //cor 
-    //opção
-    //radio bravo
-    //range carrinho
+
+    if (!sexo) {
+        alert('Por favor, selecione o sexo do seu animal');
+        return;
+    } else {
+        console.log(sexo);
+    }
+
+
+    if (!olhocor) {
+        alert('Por favor, selecione a cor dos olhos do seu animal');
+        return;
+    } else {
+        console.log(olhocor);
+    }
+
+    if (sono === '' || sono < 0 || sono > 10) {
+        alert('Por favor, informe um nível de sono');
+        return;
+    } else {
+        console.log('Nível de sono:', sono);
+    }
+
+    if (!bravo_pet) {
+        alert('Por favor, informe se seu animal é bravo');
+        return;
+    } else {
+        console.log('O animal é bravo:', bravo_pet.value);
+    }
+
+    if (carrinho === '' || carrinho < 0 || carrinho > 10) {
+        alert('Por favor, informe um nível de carrinho');
+        return;
+    } else {
+        console.log('Nível de carrinho:', carrinho);
+    }
+
     if (!alimentacao) {
         alert('Por favor, preencha o seu tipo de alimentação do seu animal');
         return;
